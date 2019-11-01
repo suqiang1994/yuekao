@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../plugins/angularjs/angular.min.js"></script>
+</head>
+<script>
+    var app=angular.module('myApp',[]);
+
+    app.controller("mycontroller",function ($scope,$http) {
+        $scope.lists = [];
+
+        $scope.list = function () {
+            $http.post("../goods/yhlist.do").success(
+                function (jg) {
+
+                    $scope.lists = jg;
+                }
+            )
+        }
+
+    })
+
+</script>
+<body ng-app="myApp" ng-controller="mycontroller" ng-init="list()">
+<a href="list.html">商品列表</a>
+<table>
+    <tr>
+        <td>序号</td>
+        <td>名称</td>
+        <td>密码</td>
+        <td>最后登录时间</td>
+        <td>积分</td>
+    </tr>
+    <tr ng-repeat="stu in lists">
+        <td>{{stu.id}}</td>
+        <td>{{stu.uname}}</td>
+        <td>{{stu.pwd}}</td>
+        <td>{{stu.lastdate}}</td>
+        <td>{{stu.poi}}</td>
+    </tr>
+</table>
+</body>
+</html>

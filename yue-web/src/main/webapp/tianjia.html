@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../plugins/angularjs/angular.min.js"></script>
+</head>
+<script>
+    var app=angular.module('myApp',[]);
+
+    app.controller("mycontroller",function ($scope,$http) {
+        $scope.goods={
+            gname:"",
+            ption:"",
+            price:0,
+            unt:0
+
+        }
+        $sopce.tj=function () {
+            alert("123")
+            $http.post("../goods/tj.do",$scope.goods).success(function (jg) {
+                location.href="list.html";
+            })
+        }
+
+
+    })
+</script>
+<body ng-app="myApp" ng-controller="mycontroller" >
+<table>
+    <tr>
+        <td>名字<input type="text" ng-model="goods.gname"></td>
+    </tr>
+    <tr>
+        <td>内容<input type="text" ng-model="goods.ption"></td>
+    </tr>
+    <tr>
+        <td>单价<input type="text" ng-model="goods.price"></td>
+    </tr>
+    <tr>
+        <td>积分<input type="text" ng-model="goods.unt"></td>
+    </tr>
+    <tr>
+        <td><input type="button" ng-click="tj()" value="添加商品">
+
+        </td>
+    </tr>
+</table>
+</body>
+</html>

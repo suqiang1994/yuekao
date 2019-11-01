@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="yue-conm" />
+        <module name="yue-pojo" />
+        <module name="yue-service" />
+        <module name="yue-service-impl" />
+        <module name="yue-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="yue-conm" target="1.7" />
+      <module name="yue-pojo" target="1.7" />
+      <module name="yue-service" target="1.7" />
+      <module name="yue-service-impl" target="1.7" />
+      <module name="yue-web" target="1.7" />
+      <module name="yuekaozice" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../plugins/angularjs/angular.min.js"></script>
+    <title>Title</title>
+ <script type="text/javascript">
+     var href=location.href;
+     var id=href.substring(href.indexOf("=")+1)
+     var app=angular.module('myApp',[]);
+
+     app.controller("mycontroller",function ($scope,$http) {
+
+        $scope.getby=function () {
+            alert(id)
+        }
+
+
+
+     })
+
+ </script>
+
+</head>
+<body ng-app="myApp" ng-controller="mycontroller" ng-init="getby()">
+<table>
+    <tr>
+        <td>编号<input type="text" ng-model="goods.gid"></td>
+    </tr>
+    <tr>
+        <td>名字<input type="text" ng-model="goods.gname"></td>
+    </tr>
+    <tr>
+        <td>内容<input type="text" ng-model="goods.ption"></td>
+    </tr>
+    <tr>
+        <td>单价<input type="text" ng-model="goods.price"></td>
+    </tr>
+    <tr>
+        <td>积分<input type="text" ng-model="goods.unt"></td>
+    </tr>
+    <tr>
+        <td><input type="button" ng-click="tj()" value="修改商品">
+
+        </td>
+    </tr>
+</table>
+</body>
+</html>

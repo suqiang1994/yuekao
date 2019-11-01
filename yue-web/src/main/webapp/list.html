@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript" src="../plugins/angularjs/angular.min.js"></script>
+</head>
+<script>
+    var app=angular.module('myApp',[]);
+
+    app.controller("mycontroller",function ($scope,$http) {
+        $scope.lists=[],
+
+        $scope.list=function () {
+            $http.post("../yue/list.do").success(
+                function (jg) {
+
+                    $scope.lists=jg;
+                }
+            )
+        },
+        $scope.dele=function (gid) {
+            alert(gid)
+            $http.get("../goods/dele.do?gid="+gid).success(
+                function (jg) {
+
+                   location.href="list.html";goods
+                }
+            )
+
+        },
+        $scope.yonghu=function () {
+            location.href="yong.html";
+        },
+        $scope.tj=function () {
+            location.href="tianjia.html";
+        }
+
+
+        
+    })
+</script>
+
+<body ng-app="myApp" ng-controller="mycontroller" ng-init="list()">
+<table>
+    <tr>
+        <td>序号</td>
+        <td>时间</td>
+        <td>名字</td>
+        <td>图片</td>
+        <td>价格</td>
+        <td>操作</td>
+    </tr>
+    <tr ng-repeat="goods in lists">
+        <td>{{goods.id}}</td>
+        <td>{{goods.dated}}</td>
+        <td>{{goods.gname}}</td>
+        <td>{{goods.img}}</td>
+        <td>{{goods.price}}</td>
+        <td>
+            <input type="button" ng-click="dele(goods.id)" value="删除">
+            <a href="upde.html">修改</a>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

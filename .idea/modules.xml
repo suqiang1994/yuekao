@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/yue-conm/yue-conm.iml" filepath="$PROJECT_DIR$/yue-conm/yue-conm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yue-pojo/yue-pojo.iml" filepath="$PROJECT_DIR$/yue-pojo/yue-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yue-service/yue-service.iml" filepath="$PROJECT_DIR$/yue-service/yue-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yue-service-impl/yue-service-impl.iml" filepath="$PROJECT_DIR$/yue-service-impl/yue-service-impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yue-web/yue-web.iml" filepath="$PROJECT_DIR$/yue-web/yue-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yuekaozice.iml" filepath="$PROJECT_DIR$/yuekaozice.iml" />
+    </modules>
+  </component>
+</project>
